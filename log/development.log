@@ -1,0 +1,18 @@
+  [4;36;1mSQL (4.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (252.0ms)[0m   [0mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;36;1mSQL (644.0ms)[0m   [0;1mCREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)[0m
+  [4;35;1mSQL (54.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100419154222)
+  [4;36;1mSQL (134.0ms)[0m   [0;1mCREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `email` varchar(255), `hashed_password` varchar(255), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (37.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100419154222')[0m
+Migrating to CreateMessages (20100419154436)
+  [4;36;1mSQL (140.0ms)[0m   [0;1mCREATE TABLE `messages` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `description` text, `user_id` integer(10), `created_at` datetime, `updated_at` datetime) ENGINE=InnoDB CHARACTER SET `utf8`[0m
+  [4;35;1mSQL (52.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100419154436')[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mSQL (39.0ms)[0m   [0mINSERT INTO `users` (`email`, `hashed_password`, `created_at`, `updated_at`) VALUES('firefreakfrancis@gmail.com', NULL, '2010-04-19 15:54:34', '2010-04-19 15:54:34')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO `messages` (`description`, `user_id`, `created_at`, `updated_at`) VALUES('First!', NULL, '2010-04-19 15:55:39', '2010-04-19 15:55:39')[0m
+  [4;35;1mMessage Update (38.0ms)[0m   [0mUPDATE `messages` SET `user_id` = 1, `updated_at` = '2010-04-19 15:55:39' WHERE `id` = 1[0m
+  [4;36;1mMessage Load (51.0ms)[0m   [0;1mSELECT * FROM `messages` WHERE (`messages`.user_id = 1) [0m
+  [4;35;1mMessage Load (19.0ms)[0m   [0mSELECT * FROM `messages` LIMIT 1[0m
+  [4;36;1mUser Load (3.0ms)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
