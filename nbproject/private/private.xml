@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/1">
+        <file>file:/home/francis/Programming/Ruby/Rails/MapBook/app/models/user.rb</file>
+        <file>file:/home/francis/Programming/Ruby/Rails/MapBook/db/migrate/20100419163239_create_users_trips.rb</file>
+        <file>file:/home/francis/Programming/Ruby/Rails/MapBook/db/migrate/20100419163032_create_trips.rb</file>
+        <file>file:/home/francis/Programming/Ruby/Rails/MapBook/db/migrate/20100419160800_create_users_events.rb</file>
+        <file>file:/home/francis/Programming/Ruby/Rails/MapBook/app/models/trip.rb</file>
+        <file>file:/home/francis/Programming/Ruby/Rails/MapBook/app/models/event.rb</file>
+        <file>file:/home/francis/Programming/Ruby/Rails/MapBook/db/migrate/20100419160641_create_events.rb</file>
+    </open-files>
+</project-private>
